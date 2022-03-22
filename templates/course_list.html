@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>The list of courses provided by the GA program:</p>
+
+<section class="course-section">
+  {% for course in object_list %}
+  <div>
+    <h3>{{ course.title }}</h3>
+    <h5>Starting Date: {{ course.starting_date }}</h5>
+    <p>{{ course.description }}</p>
+  </div>
+  {% endfor %}
+</section>
+{% endblock content %}
